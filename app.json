@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Visiting Card Scanner",
+    "slug": "visiting-card-scanner",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you select visiting card images.",
+          "cameraPermission": "The app accesses your camera to scan visiting cards."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow Visiting Card Scanner to access your contacts to save and update business cards."
+        }
+      ],
+      "expo-font",
+      "expo-status-bar"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "The app accesses your camera to scan visiting cards.",
+        "NSPhotoLibraryUsageDescription": "The app accesses your photos to let you select visiting card images.",
+        "NSContactsUsageDescription": "Allow Visiting Card Scanner to access your contacts to save and update business cards."
+      }
+    },
+    "android": {
+      "package": "com.visitingcard.scanner",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "947e3429-d360-4cce-bf67-9762fcf22c44"
+      }
+    }
+  }
+}
